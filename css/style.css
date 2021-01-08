@@ -2197,6 +2197,7 @@ h2 {
 /****** Register & Login CSS ******/
 /**********************************/
 .login {
+    
     position: relative;
     padding-top: 30px;
 }
@@ -2205,7 +2206,11 @@ h2 {
 .login .register-form {
     padding: 30px;
     background: #ffffff;
-    margin-bottom: 30px;
+    margin: 30px 300px 30px 300px;
+}
+.login.contect , .login-form.contect{
+    display: table-cell;
+  vertical-align: middle;
 }
 
 
