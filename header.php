@@ -1,8 +1,18 @@
+<?php
+if(session_id()=="")
+{
+    session_start();
+}
+include 'code/connection.php';
+$CatQuery="Select * from category";
+$CatResult=mysqli_query($conn,$CatQuery);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>E Store - eCommerce HTML Template</title>
+        <title>E Book</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="eCommerce HTML Template Free Download" name="keywords">
         <meta content="eCommerce HTML Template Free Download" name="description">
@@ -53,29 +63,49 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
                             <a href="index.php" class="nav-item nav-link active">Home</a>
-                            <a href="product-list.php" class="nav-item nav-link">Products</a>
-                            <a href="product-detail.php" class="nav-item nav-link">Product Detail</a>
-                            <a href="cart.php" class="nav-item nav-link">Cart</a>
-                            <a href="checkout.php" class="nav-item nav-link">Checkout</a>
-                            <a href="my-account.php" class="nav-item nav-link">My Account</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Category</a>
                                 <div class="dropdown-menu">
-                                    <a href="wishlist.php" class="dropdown-item">Wishlist</a>
-                                    <a href="login.php" class="dropdown-item">Login & Register</a>
-                                    <a href="contact.php" class="dropdown-item">Contact Us</a>
+                                <?php
+                                while($CatRow=mysqli_fetch_assoc($CatResult))
+                                {
+                                ?>
+                                    <a href="<?php echo 'category.php?id='.$CatRow['cat_id'];?>" class="dropdown-item"><?php echo $CatRow['cat_name'];?></a>
+                                <?php
+                                }
+                                ?>
+                                   
                                 </div>
                             </div>
+                            <a href="product-detail.php" class="nav-item nav-link">Books</a>
+                            <a href="cart.php" class="nav-item nav-link">Cart</a>
+                            <?php
+                            if(isset($_SESSION['customer']))
+                            {
+
+                           ?>
+                            <a href="profile.php" class="nav-item nav-link">My Account</a>
+                            <a href="logout.php" class="nav-item nav-link">Logout</a>
+                           <?php
+                            }else
+                            {
+
+                            
+                        
+                           ?>
                         </div>
                         <div class="navbar-nav ml-auto">
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
                                 <div class="dropdown-menu">
                                     <a href="login.php" class="dropdown-item">Login</a>
-                                    <a href="register.php" class="dropdown-item">Register</a>
+                                    <a href="customer_register.php" class="dropdown-item">Register</a>
                                 </div>
                             </div>
                         </div>
+                        <?php
+                            }
+                        ?>
                     </div>
                 </nav>
             </div>

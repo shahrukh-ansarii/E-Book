@@ -68,13 +68,43 @@
               <li class="nav-item">
                 <a href="book_category.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Insert Book Category</p>
+                  <p>Category</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="book.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Inserrt Book</p>
+                  <p>Book</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="book.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customer</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="view_comp.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Competition</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="view_memb.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Membership</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="book.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Orders</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="book.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Logout</p>
                 </a>
               </li>
             </ul>
