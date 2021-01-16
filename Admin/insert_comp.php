@@ -37,13 +37,13 @@
          
 <div class="card card-primary">
 <div class="card-header">
-                <h3 class="card-title">Quick Example</h3>
+                <h2 class="">Competition Form </h2>
               </div>
 
 <form method="post">
           <div class="card-body">
                   <div class="form-group">
-                         <center><h1>Competition Form</h1></center>
+                         
                          <br>
                          <label>Competition Title</label>
                             <input type="text" class="form-control" required name="CompTitle" >
@@ -51,10 +51,10 @@
                             <label>Competition Description</label>
                             <input type="text" class="form-control" required name="CompDesc" >
                             <br>
-                            <label>Competition StartDate0</label>
+                            <label>Competition Start Date </label>
                             <input type="date" class="form-control" required name="CompStartDate" >
                             <br>
-                            <label>Competition EndDate</label>
+                            <label>Competition End Date</label>
                             <input type="date" class="form-control" required name="CompEndDate" >
                             <br>
                             <label>Competition Duration</label>

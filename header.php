@@ -77,29 +77,35 @@ $CatResult=mysqli_query($conn,$CatQuery);
                                    
                                 </div>
                             </div>
-                            <a href="product-detail.php" class="nav-item nav-link">Books</a>
-                            <a href="cart.php" class="nav-item nav-link">Cart</a>
+                            <a href="product-list.php" class="nav-item nav-link">Books List</a>
+                            <a href="product-detail.php" class="nav-item nav-link">Books Details</a>
                             <?php
                             if(isset($_SESSION['customer']))
                             {
-
+                            ?>
+                            <a href="cart.php" class="nav-item nav-link">Cart</a>
+                            <?php
+                            }
+                            ?>
+                       
+                        </div>
+                                
+                            <?php
+                            if(isset($_SESSION['customer']))
+                            {
                            ?>
-                            <a href="profile.php" class="nav-item nav-link">My Account</a>
-                            <a href="logout.php" class="nav-item nav-link">Logout</a>
+                            <a href="logout.php" class="nav-item nav-link">Log out</a>
                            <?php
                             }else
                             {
 
-                            
-                        
                            ?>
-                        </div>
-                        <div class="navbar-nav ml-auto">
+                            <div class="navbar-nav ml-auto">
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
                                 <div class="dropdown-menu">
                                     <a href="login.php" class="dropdown-item">Login</a>
-                                    <a href="customer_register.php" class="dropdown-item">Register</a>
+                                    <a href="register.php" class="dropdown-item">Register</a>
                                 </div>
                             </div>
                         </div>

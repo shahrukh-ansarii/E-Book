@@ -22,14 +22,14 @@ include "../connection.php";
               <table class="table table-bordered table-hover">
                                  <thead>
                                     <tr>
-                                       <th>comp_id</th>
-                                       <th>comp_title</th>
-                                       <th>comp_description</th>
-                                       <th>comp_startDate</th>
-                                       <th>comp_endDate</th>
-                                       <th>comp_duration</th>
-                                       <th>comp_prize</th>
-                                       <th>operation</th> 
+                                       <th>Competition ID</th>
+                                       <th>Competition Title</th>
+                                       <th>Competition Description</th>
+                                       <th>Competition Start Date</th>
+                                       <th>Competition End Date</th>
+                                       <th>Competition Duration</th>
+                                       <th>Competition Prize</th>
+                                       <th>Operation</th> 
                                     </tr>
                                  </thead>
                                  <tbody>
@@ -45,10 +45,9 @@ include "../connection.php";
                                         <td><?php echo $row['comp_endDate'];?></td>
                                         <td><?php echo $row['comp_duration'];?></td>
                                         <td><?php echo $row['comp_prize'];?></td>
-                                        <td><a href="<?php echo'comp_edit.php?id='.$row['comp_id']; ?>"><button class="badge badge-complete" >
-                                        <i class="far fa-edit"></i></button></a>
-                                        <a href="product.php">product</a>
-                                        <a href="<?php echo'comp_delete.php?id='.$row['comp_id']; ?>"><button class="badge badge-pending" ><i class="fas fa-trash"></i></button></a></td>
+                                        <td><a href="<?php echo'edit_comp.php?id='.$row['comp_id']; ?>"><button >
+                                        <i class="fas fa-pen"></i></button></a>
+                                        <a href="<?php echo'delete_comp.php?id='.$row['comp_id']; ?>"><button ><i class="fas fa-trash-alt"></i></button></a></td>
                                     </tr>
                                         <?php
                                             }
@@ -66,6 +65,9 @@ include "../connection.php";
         <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
+         <div>
+         <a href="insert_comp.php"><button type="button" class="btn btn-success btn-md">Add <i class="nav-icon fa fa-plus"></i> </button></a>
+         </div>
     </section>
     <!-- /.content -->
   </div>

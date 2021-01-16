@@ -58,56 +58,75 @@
             </a>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-plus"></i>
+              <i class="nav-icon fa fa-list-alt"></i>
               <p>
-                Insert Options
+                Category
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="book_category.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Category</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="book.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Book</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="book.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Customer</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="view_comp.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Competition</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="view_memb.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Membership</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="book.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Orders</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="book.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Logout</p>
-                </a>
-              </li>
-            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book-open"></i>
+              <p>
+                Books
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="view_city.php" class="nav-link">
+              <i class="nav-icon fas fa-city"></i>
+              <p>
+                City
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="view_cus.php" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Customer
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="view_comp.php" class="nav-link">
+              <i class="nav-icon fas fa-trophy"></i>
+              <p>
+                Competition
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="view_memb.php" class="nav-link">
+              <i class="nav-icon fas fa-handshake"></i>
+              <p>
+                Membership
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-shopping-cart"></i>
+              <p>
+                Orders
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-sign-out-alt"></i>
+              <p>
+                Log out
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">

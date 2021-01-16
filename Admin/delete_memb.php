@@ -1,15 +1,15 @@
 <?php
-    include "connection.php";
+    include "../connection.php";
 
     if(isset($_GET['id']))
     {
         $id=$_GET['id'];
-        $query = "delete from competition where comp_id='$id'";
+        $query = "delete from membership where memb_id='$id'";
         $result = mysqli_query($conn,$query);
         if($result)
         {
             // echo "<script>alert('Record Deleted');</script>";
-            header('location:index.php');
+            header('location:view_memb.php');
         }
         else
         {
@@ -18,6 +18,6 @@
     }
     else
     {
-        header('location:index.php');
+        header('location:view_memb.php');
     }
 ?>
