@@ -57,7 +57,7 @@
               </p>
             </a>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="view_cat.php" class="nav-link">
               <i class="nav-icon fa fa-list-alt"></i>
               <p>
                 Category
@@ -66,7 +66,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="view_book.php" class="nav-link">
               <i class="nav-icon fas fa-book-open"></i>
               <p>
                 Books

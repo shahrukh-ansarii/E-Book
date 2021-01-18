@@ -1,5 +1,5 @@
 <?php
-if(session_id()=="")
+if(session_id()=="customer")
 {
     session_start();
 }

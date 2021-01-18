@@ -54,6 +54,11 @@ include "../connection.php";
                                         ?>
                                  </tbody>
                               </table>
+                              <br>
+                              
+                  <div>
+                      <a href="insert_comp.php"><button type="button" class="btn btn-success btn-md">Add <i class="nav-icon fa fa-plus"></i> </button></a>
+                  </div>
               </div>
               <!-- /.card-body -->
             </div>
@@ -65,9 +70,6 @@ include "../connection.php";
         <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
-         <div>
-         <a href="insert_comp.php"><button type="button" class="btn btn-success btn-md">Add <i class="nav-icon fa fa-plus"></i> </button></a>
-         </div>
     </section>
     <!-- /.content -->
   </div>

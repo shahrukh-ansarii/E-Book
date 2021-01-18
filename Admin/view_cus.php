@@ -15,7 +15,7 @@ include "../connection.php";
           <div class="col-12">
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Customer List</h3>
+                <h2>Customer List</h2>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -45,9 +45,9 @@ include "../connection.php";
                                         <td><?php echo $row['city_id'];?></td>
                                         <td><?php echo $row['cus_address'];?></td>
                                         <td><?php echo $row['cus_contact'];?></td>
-                                        <td><a href="<?php echo'edit_cus.php?id='.$row['cus_id']; ?>"><button class="badge badge-complete" >
-                                        <i class="far fa-edit"></i></button></a>
-                                        <a href="<?php echo'delete_cus.php?id='.$row['cus_id']; ?>"><button class="badge badge-pending" ><i class="fas fa-trash"></i></button></a></td>
+                                        <td><a href="<?php echo'edit_cus.php?id='.$row['cus_id']; ?>"><button >
+                                        <i class="fas fa-pen"></i></button></a>
+                                        <a href="<?php echo'delete_cus.php?id='.$row['cus_id']; ?>"><button ><i class="fas fa-trash-alt"></i></button></a></td>
                                     </tr>
                                         <?php
                                             }
