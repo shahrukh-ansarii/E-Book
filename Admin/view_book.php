@@ -43,7 +43,7 @@
                                         <td><?php echo $row['book_name'];?></td>
                                         <td><?php echo $row['book_title'];?></td>
                                         <td><?php echo $row['cat_id'];?></td>
-                                        <td><img src="<?php echo "images/".$row['book_image']; ?>" width="100px" height="100px"/></td>
+                                        <td><img src="<?php echo "images/".$row['book_image']; ?>" width="120px" height="150px"/></td>
                                         <td><?php echo $row['book_author'];?></td>
                                         <td><?php echo $row['book_price'];?></td>
                                         <td><?php echo $row['book_edition'];?></td>

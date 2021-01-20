@@ -1,8 +1,8 @@
 <?php
-if(session_id()=="customer")
-{
-    session_start();
-}
+session_start();
+
+
+
 include 'code/connection.php';
 $CatQuery="Select * from category";
 $CatResult=mysqli_query($conn,$CatQuery);
@@ -40,7 +40,7 @@ $CatResult=mysqli_query($conn,$CatQuery);
                 <div class="row">
                     <div class="col-sm-6">
                         <i class="fa fa-envelope"></i>
-                        support@email.com
+                        support@ebook.com
                     </div>
                     <div class="col-sm-6">
                         <i class="fa fa-phone-alt"></i>
@@ -117,3 +117,37 @@ $CatResult=mysqli_query($conn,$CatQuery);
             </div>
         </div>
         <!-- Nav Bar End -->  
+
+         <!-- Bottom Bar Start -->
+         <div class="bottom-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="index.php">
+                                <img src="img/logo1.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="search">
+                            <input type="text" placeholder="Search">
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="user">
+                            <a href="wishlist.php" class="btn wishlist">
+                                <i class="fa fa-heart"></i>
+                                <span>(0)</span>
+                            </a>
+                            <a href="cart.php" class="btn cart"> 
+                                <i class="fa fa-shopping-cart"  <?php echo count($_SESSION['cart']);?>></i>
+                                <span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Bar End -->

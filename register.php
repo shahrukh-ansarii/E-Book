@@ -2,7 +2,7 @@
    
     include "header.php";
     include "connection.php";
-    $query = "select * from city";
+    $query = "select * from city2";
     $result = mysqli_query($conn,$query);
     
     if(isset($_POST['submit']))
@@ -13,37 +13,29 @@
       $address=$_POST['cusAddress'];
       $city=$_POST['cusCity'];
       $contact=$_POST['cusContact'];
+
+
+      $cityquery = "select city_id from city2 where city_name = '$city'";
+      $cityresult = mysqli_query($conn, $cityquery);
+      $cityrow = mysqli_fetch_array($cityresult);
+     $mycityId = $cityrow[0];
     
-              $query1 = "insert into customer (cus_name, cus_email, cus_password, cus_address, city_id, cus_contact) 
-              values ('$name','$email','$password','$address','$city','$contact')";
+              $query1 = "insert into customer2 (cus_name, cus_email, cus_password, cus_address, city_id, cus_contact) 
+              values ('$name','$email','$password','$address','$mycityId','$contact')";
               $result1 = mysqli_query($conn,$query1);
               if($result1)
               {
-                  header('location:index.php');
+                header('location:index.php');
+                //   echo "<script>alert('inserted!')</script>";
               }
                 else
                 {
-                    echo "<script>alert('Record Not Inserted');</script>";
+                    echo "<script>alert('Not Registered');</script>";
                 }
     }
 
 ?>   
-        
-        <!-- Bottom Bar Start -->
-        <div class="bottom-bar">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-md-3">
-                        <div class="logo">
-                            <a href="index.php">
-                                <img src="img/logo.png" alt="Logo">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Bottom Bar End --> 
+     
         
         <!-- Login Start -->
         <div class="login">
@@ -78,11 +70,13 @@
                                 while($row = mysqli_fetch_array($result))
                                 {
                             ?>
-                            <option value="<?php echo $row[0];?>"><?php echo $row[1];?></option>
+                            <option><?php echo $row[1];?></option>
                             <?php
+                            
                                 }
                             ?>
                         </select>
+                        
                      </div>
                      <div class="form-group">
                      <br>

@@ -6,7 +6,7 @@ if(isset($_POST['submit']))
     $email=$_POST['cusEmail'];
     $password=$_POST['cusPass'];
 
-    $query="select * from customer where cus_email = '$email' && cus_password = '$password'";
+    $query="select * from customer2 where cus_email = '$email' && cus_password = '$password'";
     $result=mysqli_query($conn,$query);
     if($result)
     {

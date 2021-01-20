@@ -39,7 +39,7 @@
                                         <td><?php echo $row['cat_id'];?></td>
                                         <td><?php echo $row['cat_name'];?></td>
                                         <td><?php echo $row['cat_description'];?></td>
-                                        <td><img src="<?php echo "images/".$row['cat_image']; ?>" width="100px" height="100px"/></td>
+                                        <td><img src="<?php echo "images/".$row['cat_image']; ?>" width="120px" height="150px"/></td>
                                         <td><a href="<?php echo'edit_cat.php?id='.$row['cat_id']; ?>"><button >
                                         <i class="fas fa-pen"></i></button></a>
                                         <a href="<?php echo'delete_cat.php?id='.$row['cat_id']; ?>"><button ><i class="fas fa-trash-alt"></i></button></a></td>
