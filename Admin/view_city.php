@@ -2,7 +2,7 @@
 
 include "includes/header.php";
 include "../connection.php";
-     $query = "select * from city";
+     $query = "select * from city2";
      $result = mysqli_query($conn,$query);
 ?>
 

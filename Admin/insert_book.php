@@ -2,8 +2,8 @@
     include "../connection.php";
 
 
-    $query = "select * from category";
-    $result = mysqli_query($conn,$query);
+    $cquery = "select * from category";
+    $cresult = mysqli_query($conn,$cquery);
 
     if(isset($_POST['btnSubmit']))
     {
@@ -28,7 +28,7 @@
             echo "PDF not uploaded";
           }else{
               
-              $query="insert into books(book_name,book_title,cat_id,book_image,book_author,book_price,book_edition,book_pdf) values('$name','$title','$Catid','$author','$price','$edition','$image','$pdf')";
+              $query="insert into books(book_name,book_title,cat_id,book_image,book_author,book_price,book_edition,book_pdf) values('$name','$title','$Catid','$image','$author','$price','$edition','$pdf')";
               $result=mysqli_query($conn,$query);
               if($result)
               {
@@ -67,9 +67,9 @@
                      <div class="form-group">
                         <label>Book Category</label>
                         <br>
-                        <select name="cat_id">
+                        <select class="form-control" name="cat_id">
                             <?php
-                                while($row = mysqli_fetch_array($result))
+                                while($row = mysqli_fetch_array($cresult))
                                 {
                             ?>
                             <option value="<?php echo $row[0];?>"><?php echo $row[1];?></option>

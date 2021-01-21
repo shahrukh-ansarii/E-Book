@@ -7,7 +7,7 @@
          $name = $_POST['cityName'];
       
 
-        $query = "Insert into city (city_name) VALUES ('$name')";
+        $query = "Insert into city2 (city_name) VALUES ('$name')";
 
         $result = mysqli_query($conn,$query);
         if($result)

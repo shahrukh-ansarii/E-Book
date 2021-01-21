@@ -1,5 +1,12 @@
 <?php
-
+if(session_id()=="")
+{
+    session_start();
+}
+if(!isset($_SESSION['cart']))
+ {
+     $_SESSION['cart']=array();
+ }
 include 'code/connection.php';
 $CatQuery="Select * from category";
 $CatResult=mysqli_query($conn,$CatQuery);
@@ -134,13 +141,10 @@ $CatResult=mysqli_query($conn,$CatQuery);
                     </div>
                     <div class="col-md-3">
                         <div class="user">
-                            <a href="wishlist.php" class="btn wishlist">
-                                <i class="fa fa-heart"></i>
-                                <span>(0)</span>
-                            </a>
+                            
                             <a href="cart.php" class="btn cart"> 
                                 <i class="fa fa-shopping-cart"></i>
-                                <span></span>
+                                <span><?php echo "(".count($_SESSION['cart']).")";?></span>
                             </a>
                         </div>
                     </div>

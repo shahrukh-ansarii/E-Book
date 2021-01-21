@@ -1,9 +1,9 @@
 <?php
     session_start();
 
-   
+    $id=$_GET['id'];
     include 'code/connection.php';
-    $productQuery = "Select * from books ";
+    $productQuery = "Select * from books where cat_id='$id'";
     $productQueryResult = mysqli_query($conn, $productQuery);
 
     include "header.php";

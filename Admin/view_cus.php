@@ -2,9 +2,9 @@
 
 include "includes/header.php";
 include "../connection.php";
-     $query = "select * from customer";
+     $query = "select * from customer2 join city2 on customer2.city_id = city2.city_id";
      $result = mysqli_query($conn,$query);
-?>
+?>x
 
 
        
@@ -42,7 +42,7 @@ include "../connection.php";
                                         <td><?php echo $row['cus_name'];?></td>
                                         <td><?php echo $row['cus_email'];?></td>
                                         <td><?php echo $row['cus_password'];?></td>
-                                        <td><?php echo $row['city_id'];?></td>
+                                        <td><?php echo $row['city_name'];?></td>
                                         <td><?php echo $row['cus_address'];?></td>
                                         <td><?php echo $row['cus_contact'];?></td>
                                         <td><a href="<?php echo'edit_cus.php?id='.$row['cus_id']; ?>"><button >

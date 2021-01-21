@@ -1,8 +1,11 @@
 <?php
+ 
          include 'connection.php';
             include "header.php";
             $query="select * from books";
         $result=mysqli_query($conn,$query);
+       
+        
         ?>
         <!-- Main Slider Start -->
         <div class="header">
@@ -203,21 +206,15 @@
                 <div class="section-header">
                     <h1>Recent Product</h1>
                 </div>
-                <div class="row align-items-center product-slider product-slider-4">
+                <div class="row align-items-center product-slider product-slider-4" >
                 <?php
                     while ($row = mysqli_fetch_assoc($result)) {
                 ?>
-                    <div class="col-lg-3">
+                    <div class="col-lg-12">
                         <div class="product-item">
                             <div class="product-title">
                                 <a href="#"><?php echo $row['book_name'] ?></a>
-                                <!-- <div class="ratting">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div> -->
+                               
                             </div>
                             <div class="product-image">
                                 <a href="product-detail.html">

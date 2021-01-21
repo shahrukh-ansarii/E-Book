@@ -5,7 +5,7 @@ include "../connection.php";
 $id = $_GET['id'];
 if(isset($_GET['id']))
 {
-        $query = "select * from customer where cus_id = '$id'";
+        $query = "select * from customer2 where cus_id = '$id'";
         $result = mysqli_query($conn,$query);
         $row = mysqli_fetch_array($result); //mysqli_fetch_row()
 }

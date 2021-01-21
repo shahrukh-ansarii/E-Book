@@ -1,6 +1,6 @@
 <?php
      include "../connection.php";
-     $query = "select * from books";
+     $query = "select * from books join category on books.cat_id = category.cat_id";
      $result = mysqli_query($conn,$query);
      include "includes/header.php";
 ?>
@@ -42,7 +42,7 @@
                                         <td><?php echo $row['book_id'];?></td>
                                         <td><?php echo $row['book_name'];?></td>
                                         <td><?php echo $row['book_title'];?></td>
-                                        <td><?php echo $row['cat_id'];?></td>
+                                        <td><?php echo $row['cat_name'];?></td>
                                         <td><img src="<?php echo "images/".$row['book_image']; ?>" width="120px" height="150px"/></td>
                                         <td><?php echo $row['book_author'];?></td>
                                         <td><?php echo $row['book_price'];?></td>

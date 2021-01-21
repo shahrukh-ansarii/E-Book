@@ -4,7 +4,7 @@
     if(isset($_GET['id']))
     {
         $id=$_GET['id'];
-        $query = "delete from customer where cus_id='$id'";
+        $query = "delete from customer2 where cus_id='$id'";
         $result = mysqli_query($conn,$query);
         if($result)
         {
