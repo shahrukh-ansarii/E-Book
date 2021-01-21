@@ -22,8 +22,8 @@
                     <div class="col-lg-4">
                         <div class="contact-info">
                             <h2>Our Office</h2>
-                            <h3><i class="fa fa-map-marker"></i>123 Office, Los Angeles, CA, USA</h3>
-                            <h3><i class="fa fa-envelope"></i>office@example.com</h3>
+                            <h3><i class="fa fa-map-marker"></i>Aptech North Naziamabad Karachi</h3>
+                            <h3><i class="fa fa-envelope"></i>email@ebook.com</h3>
                             <h3><i class="fa fa-phone"></i>+123-456-7890</h3>
                             <div class="social">
                                 <a href=""><i class="fab fa-twitter"></i></a>
@@ -37,8 +37,8 @@
                     <div class="col-lg-4">
                         <div class="contact-info">
                             <h2>Our Store</h2>
-                            <h3><i class="fa fa-map-marker"></i>123 Store, Los Angeles, CA, USA</h3>
-                            <h3><i class="fa fa-envelope"></i>store@example.com</h3>
+                            <h3><i class="fa fa-map-marker"></i>Aptech North Naziamabad Karachi</h3>
+                            <h3><i class="fa fa-envelope"></i>email@ebook.com</h3>
                             <h3><i class="fa fa-phone"></i>+123-456-7890</h3>
                             <div class="social">
                                 <a href=""><i class="fab fa-twitter"></i></a>

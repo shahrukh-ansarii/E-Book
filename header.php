@@ -82,7 +82,7 @@ $CatResult=mysqli_query($conn,$CatQuery);
                                 </div>
                             </div>
                             <a href="product-list.php" class="nav-item nav-link">Books List</a>
-                            <a href="product-detail.php" class="nav-item nav-link">Books Details</a>
+                            <a href="contact.php" class="nav-item nav-link">Contcat Us</a>
                             <?php
                             if(isset($_SESSION['customer']))
                             {

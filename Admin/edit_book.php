@@ -1,9 +1,6 @@
 <?php
-session_start();
-if(!isset($_SESSION['admin']))
-{
-  header('location:login.php');
-}
+
+include "../connection.php";
 
 $cquery = "select * from category";
 $cresult = mysqli_query($conn,$cquery);

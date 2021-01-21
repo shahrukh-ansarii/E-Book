@@ -1,9 +1,6 @@
 <?php
-session_start();
-if(!isset($_SESSION['admin']))
-{
-  header('location:login.php');
-}
+
+include "../connection.php";
 
 
 if(isset($_POST['catUpdate']))

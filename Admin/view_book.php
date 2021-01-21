@@ -1,9 +1,5 @@
 <?php
-session_start();
-if(!isset($_SESSION['admin']))
-{
-  header('location:login.php');
-}
+     include "../connection.php";
      $query = "select * from books join category on books.cat_id = category.cat_id";
      $result = mysqli_query($conn,$query);
      include "includes/header.php";

@@ -1,9 +1,16 @@
 <?php
  
-         include 'connection.php';
-            include "header.php";
-            $query="select * from books";
+        include 'connection.php';
+        include "header.php";
+
+        $query="select * from books";
         $result=mysqli_query($conn,$query);
+        
+        $query1="select * from books";
+        $result1=mysqli_query($conn,$query1);
+     
+        $query2="select * from category";
+        $result2=mysqli_query($conn,$query2);
        
         
         ?>
@@ -17,7 +24,7 @@
                         
                         <div class="header-img">
                             
-                            <img src="img/slider4.jpg" alt="Slider Image" />
+                            <img src="img/slider4.jpg"   alt="Slider Image" />
                                 <a class="img-text" href="product-list.php">
                                     <p>Some text goes here that describes the </p>
                                     <a href="#"><i class="fa fa-cart-plus"></i></a>
@@ -148,35 +155,37 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="category-item ch-350">
-                            <img src="img/category3.jpg" />
+                            <img src="img/category-1.jpg" />
                             <a class="category-name" href="">
-                                <p>Some text goes here that describes the image</p>
+                                <p>	Action fiction is a form of genre fiction whose subject matter is characterized by emphasis on exciting action sequences.It includes martial arts action, extreme sports action, car chases and vehicles, suspense action, and action comedy, with each focusing in more detail on its own type and flavor of action.</p>
+                                    <a class="btn" href="product-list.php"><i class="fa fa-shopping-cart"></i>Shop Now</a>
                             </a>
+                        
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="category-item ch-400">
-                            <img src="img/category4.jpg" />
+                            <img src="img/category-2.jpg" />
                             <a class="category-name" href="">
-                                <p>Some text goes here that describes the image</p>
+                                <p>Mystery fiction is a genre of fiction that usually involves a mysterious death or a crime to be solved. "Mystery fiction" can be detective stories in which the emphasis is on the puzzle or suspense element and its logical solution such as a whodunit.</p>
                             </a>
                         </div>
                        
                     </div>
                     <div class="col-md-3">
                         <div class="category-item ch-400">
-                            <img src="img/category6.jpg" />
+                            <img src="img/category-6.jpg" />
                             <a class="category-name" href="">
-                                <p>Some text goes here that describes the image</p>
+                                <p>	Horror story, a story in which the focus is on creating a feeling of fear. Such tales are of ancient origin and form a substantial part of the body of folk literature. They can feature supernatural elements such as ghosts, witches, or vampires, or they can address more realistic psychological fears.</p>
                             </a>
                         </div>
                 
                     </div>
                     <div class="col-md-3">
                         <div class="category-item ch-400">
-                            <img src="img/category8.jpg" />
+                            <img src="img/category-4.jpg" />
                             <a class="category-name" href="">
-                                <p>Some text goes here that describes the image</p>
+                                <p>Another description of a Fantasy Novel is any book that contains unrealistic settings, or magic, often set in a medieval universe, or possibly involving mythical beings or supernatural forms as a primary element of the plot, theme, or setting. ... Fantasy usually describes those stories that could not happen in real life.</p>
                             </a>
                         </div>
                     </div>
@@ -221,8 +230,7 @@
                                     <img src="<?php echo "admin/images/".$row['book_image']; ?>" width="200px" height="290px" alt="Product Image">
                                 </a>
                                 <div class="product-action">
-                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
-                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="product-list.php"><i class="fa fa-cart-plus"></i></a>
                                     <a href="#"><i class="fa fa-search"></i></a>
                                 </div>
                             </div>
@@ -260,229 +268,72 @@
         <!-- Newsletter End -->        
         
         <!-- Featured Product Start -->
-        <div class="featured-product product">
+        <div class="reecent-product product">
             <div class="container-fluid">
                 <div class="section-header">
                     <h1>Featured Product</h1>
                 </div>
-                <div class="row align-items-center product-slider product-slider-4">
-                    <div class="col-lg-3">
+                <div class="row align-items-center product-slider product-slider-4" >
+                <?php
+                    while ($row1 = mysqli_fetch_assoc($result1)) {
+                ?>
+                    <div class="col-lg-12">
                         <div class="product-item">
                             <div class="product-title">
-                                <a href="#">Product Name</a>
-                                <div class="ratting">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                                <a href="#"><?php echo $row1['book_name'] ?></a>
+                               
                             </div>
                             <div class="product-image">
                                 <a href="product-detail.html">
-                                    <img src="img/product-6.jpg" alt="Product Image">
+                                    <img src="<?php echo "admin/images/".$row1['book_image']; ?>" width="200px" height="290px" alt="Product Image">
                                 </a>
                                 <div class="product-action">
-                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
-                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="product-list.php"><i class="fa fa-cart-plus"></i></a>
                                     <a href="#"><i class="fa fa-search"></i></a>
                                 </div>
                             </div>
                             <div class="product-price">
-                                <h3><span>$</span>99</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <h3><span>Rs.</span><?php echo $row1['book_price'] ?></h3>
+                                <a class="btn" href="product-list.php"><i class="fa fa-shopping-cart"></i>Buy Now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="product-item">
-                            <div class="product-title">
-                                <a href="#">Product Name</a>
-                                <div class="ratting">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="product-image">
-                                <a href="product-detail.html">
-                                    <img src="img/product-7.jpg" alt="Product Image">
-                                </a>
-                                <div class="product-action">
-                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
-                                    <a href="#"><i class="fa fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <h3><span>$</span>99</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="product-item">
-                            <div class="product-title">
-                                <a href="#">Product Name</a>
-                                <div class="ratting">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="product-image">
-                                <a href="product-detail.html">
-                                    <img src="img/product-8.jpg" alt="Product Image">
-                                </a>
-                                <div class="product-action">
-                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
-                                    <a href="#"><i class="fa fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <h3><span>$</span>99</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="product-item">
-                            <div class="product-title">
-                                <a href="#">Product Name</a>
-                                <div class="ratting">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="product-image">
-                                <a href="product-detail.html">
-                                    <img src="img/product-9.jpg" alt="Product Image">
-                                </a>
-                                <div class="product-action">
-                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
-                                    <a href="#"><i class="fa fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <h3><span>$</span>99</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="product-item">
-                            <div class="product-title">
-                                <a href="#">Product Name</a>
-                                <div class="ratting">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="product-image">
-                                <a href="product-detail.html">
-                                    <img src="img/product-10.jpg" alt="Product Image">
-                                </a>
-                                <div class="product-action">
-                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
-                                    <a href="#"><i class="fa fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-price">
-                                <h3><span>$</span>99</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
         </div>
+        <br>
         <!-- Featured Product End -->
         
         <!-- Review Start -->
         <div class="review">
             <div class="container-fluid">
                 <div class="row align-items-center review-slider normal-slider">
+                <?php
+                    while ($row2 = mysqli_fetch_assoc($result2)) 
+                    {
+                ?>
                     <div class="col-md-6">
                         <div class="review-slider-item">
                             <div class="review-img">
-                                <img src="img/review-1.jpg" alt="Image">
+                            <img src="<?php echo "admin/images/".$row2['cat_image']; ?>" width="200px" height="290px" alt="Category Image">
                             </div>
                             <div class="review-text">
-                                <h2>Author Name</h2>
-                                <h3>Profession</h3>
-                                <div class="ratting">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae nunc eget leo finibus luctus et vitae lorem
-                                </p>
+                                <h2><?php echo $row2['cat_name'] ?></h2>
+                                <h3><?php echo $row2['cat_description'] ?></h3>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="review-slider-item">
-                            <div class="review-img">
-                                <img src="img/review-2.jpg" alt="Image">
-                            </div>
-                            <div class="review-text">
-                                <h2>Author Name</h2>
-                                <h3>Profession</h3>
-                                <div class="ratting">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae nunc eget leo finibus luctus et vitae lorem
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="review-slider-item">
-                            <div class="review-img">
-                                <img src="img/review-3.jpg" alt="Image">
-                            </div>
-                            <div class="review-text">
-                                <h2>Author Name</h2>
-                                <h3>Profession</h3>
-                                <div class="ratting">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae nunc eget leo finibus luctus et vitae lorem
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                            <?php
+                                }
+                            ?>
                 </div>
             </div>
         </div>
         <!-- Review End --> 
 
-        <?php
-            include "footer.php";
-        ?>
+    <?php
+        include "footer.php";
+    ?>

@@ -1,10 +1,5 @@
 <?php
-session_start();
-if(!isset($_SESSION['admin']))
-{
-  header('location:login.php');
-}
-    include "includes/header.php";
+    include "../connection.php";
 
     if(isset($_GET['id']))
     {

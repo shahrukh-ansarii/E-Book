@@ -8,6 +8,8 @@ if(!isset($_SESSION['admin']))
 include "../connection.php";
      $query = "select * from orders";
      $result = mysqli_query($conn,$query);
+
+     include "includes/header.php";
 ?>
         
         <section class="content">
@@ -62,6 +64,6 @@ include "../connection.php";
     <!-- /.content -->
   </div>
 
-        <?php
+  <?php
     include "includes/footer.php";
   ?>

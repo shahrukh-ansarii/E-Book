@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+if(!isset($_SESSION['admin']))
+{
+  header('location:login.php');
+}
+
 include "includes/header.php";
 include "../connection.php";
      $query = "select * from customer2 join city2 on customer2.city_id = city2.city_id";
