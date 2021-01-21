@@ -1,6 +1,9 @@
 <?php
-
-include "../connection.php";
+session_start();
+if(!isset($_SESSION['admin']))
+{
+  header('location:login.php');
+}
 
 $cquery = "select * from category";
 $cresult = mysqli_query($conn,$cquery);
@@ -12,11 +15,9 @@ if(isset($_POST['bookUpdate']))
     $name = $_POST['book_name'];
     $title = $_POST['book_title'];
     $category = $_POST['cat_id'];
-    
     $author= $_POST['book_author'];
     $price= $_POST['book_price'];
     $edition= $_POST['book_edition'];
-    
     
     $image= $_POST['imgname'];
     $pdf= $_POST['pdfname'];
@@ -42,29 +43,29 @@ if(isset($_POST['bookUpdate']))
      }
     
      
-    $query1 = "update books set book_name='$name', book_title='$title', book_image='$image', book_author='$author', book_price='$price', cat_id='$category',book_edition='$edition', book_pdf='$pdf' where book_id='$id' ";
-    $result1 = mysqli_query($conn,$query1);
-    if($result1)
+        $query1 = "update books set book_name='$name', book_title='$title', book_image='$image', book_author='$author', book_price='$price', cat_id='$category',book_edition='$edition', book_pdf='$pdf' where book_id='$id' ";
+        $result1 = mysqli_query($conn,$query1);
+        if($result1)
+        {
+            header('location:view_book.php');
+        }
+        else
+        {
+            echo "<script>alert('Record Not Updated')</script>";
+        }
+    
+}
+    $id = $_GET['id'];
+    if(isset($_GET['id']))
     {
-        header('location:view_book.php');
+            $query = "select * from books where book_id = '$id'";
+            $result = mysqli_query($conn,$query);
+            $row = mysqli_fetch_array($result); //mysqli_fetch_row()
     }
     else
     {
-        echo "<script>alert('Record Not Updated')</script>";
+        header('location:view_book.php');
     }
-    
-}
-$id = $_GET['id'];
-if(isset($_GET['id']))
-{
-        $query = "select * from books where book_id = '$id'";
-        $result = mysqli_query($conn,$query);
-        $row = mysqli_fetch_array($result); //mysqli_fetch_row()
-}
-else
-{
-    header('location:view_book.php');
-}
 
 
 
@@ -80,7 +81,7 @@ include "includes/header.php";
 
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h2 class="">Category Book Form </h2>
+                        <h2 class="">Update Book Form </h2>
                     </div>
                     <div class="card-body">
                         <div class="form-group">
@@ -114,7 +115,7 @@ include "includes/header.php";
                                             }
                                         }
                                         ?>
-                        </select>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                 <input type="hidden" name="imgname" value="<?php echo $row[4]; ?>">

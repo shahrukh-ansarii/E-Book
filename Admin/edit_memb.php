@@ -1,6 +1,9 @@
 <?php
-
-include "../connection.php";
+session_start();
+if(!isset($_SESSION['admin']))
+{
+  header('location:login.php');
+}
 
 $id = $_GET['id'];
 if (isset($_GET['id'])) {

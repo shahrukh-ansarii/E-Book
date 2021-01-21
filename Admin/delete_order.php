@@ -8,12 +8,12 @@ if(!isset($_SESSION['admin']))
     if(isset($_GET['id']))
     {
         $id=$_GET['id'];
-        $query = "delete from competition where comp_id='$id'";
+        $query = "delete from orders where o_id='$id'";
         $result = mysqli_query($conn,$query);
         if($result)
         {
             // echo "<script>alert('Record Deleted');</script>";
-            header('location:view_comp.php');
+            header('location:view_memb.php');
         }
         else
         {
@@ -22,6 +22,6 @@ if(!isset($_SESSION['admin']))
     }
     else
     {
-        header('location:view_comp.php');
+        header('location:view_order.php');
     }
 ?>

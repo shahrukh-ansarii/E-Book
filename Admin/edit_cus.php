@@ -2,6 +2,9 @@
 
 include "../connection.php";
 
+$cquery = "select * from city2";
+$cresult = mysqli_query($conn,$cquery);
+
 $id = $_GET['id'];
 if(isset($_GET['id']))
 {
@@ -22,7 +25,7 @@ if(isset($_POST['cusUpdate']))
     $address = $_POST['cusAddress'];
     $city = $_POST['cusCity'];
     $contact = $_POST['cusContact'];
-    $query1 = "update customer set cus_name='$name', cus_email='$email', cus_password='$password', cus_address='$address', city_id='$city',cus_contact='$contact'  where cus_id='$id' ";
+    $query1 = "update customer2 set cus_name='$name', cus_email='$email', cus_password='$password', cus_address='$address', city_id='$city',cus_contact='$contact'  where cus_id='$id' ";
     $result1 = mysqli_query($conn,$query1);
     if($result1)
     {
@@ -72,7 +75,25 @@ include "includes/header.php";
                                 </div>
                                 <div class="form-group">
                                     <label>Customer City</label>
-                                    <input type="text" class="form-control" required name="cusCity" value="<?php echo "$row[5]"; ?>">
+                                    <select name="cusCity" class="form-control">
+                                        <?php
+                                            while($crow = mysqli_fetch_array($cresult))
+                                            {
+                                                if($row[5]==$crow[0])
+                                                {
+                                        ?>
+                                        <option value="<?php echo $crow[0];?>" selected><?php echo $crow[1];?></option>
+                                        <?php
+                                            }
+                                            else
+                                            {
+                                        ?>
+                                         <option value="<?php echo $crow[0];?>" ><?php echo $crow[1];?></option>
+                                        <?php
+                                            }
+                                        }
+                                        ?>
+                                    </select>
                                 </div>
                                 
                                 <div class="form-group">

@@ -15,7 +15,7 @@ include "../connection.php";
           <div class="col-12">
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">City List</h3>
+                <h2>City List</h2>
               </div>
               <!-- /.card-header -->
               <div class="card-body">

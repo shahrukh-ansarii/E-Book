@@ -1,5 +1,10 @@
 <?php
-    include "../connection.php";
+session_start();
+if(!isset($_SESSION['admin']))
+{
+  header('location:login.php');
+}
+    include "includes/header.php";
 
     if(isset($_GET['id']))
     {
