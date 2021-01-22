@@ -35,7 +35,8 @@ if($result)
     unset($_SESSION['cart']);
     unset($_SESSION['qty_array']);
     unset($_SESSION['total']);
-    header('location:index.php');
+    echo"<script>alert('Order Hasn been Recieved')</script>";
+ echo "<script>window.location.href='index.php';</script>";
 }else{
     echo "Error: ".mysqli_error($conn);
 }

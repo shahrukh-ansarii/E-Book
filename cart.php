@@ -53,7 +53,6 @@
                                                     <td>
                                                         <div class="img">
                                                             <a href="#"><img src="<?php echo "admin/images/" . $row['book_image']; ?>" alt="Image"></a>
-
                                                         </div>
                                                     </td>
                                                     <td>
@@ -75,8 +74,6 @@
                                                     <?php $total += $_SESSION['qty_array'][$index]*$row['book_price']; ?>
                 
                                                 </tr>
-
-
                                         <?php
                                                 $index++;
                                             }
@@ -86,19 +83,29 @@
 
                                     </tbody>
                                 </table>
-                                <?php echo "Subtotal &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Rs :".$total; $_SESSION['total']=$total;?>
+                                <br>
                                 <div class="col-md-12">
                                     <div class="cart-summary">
+                                         <div class="col-md-12">
+                                    <div class="cart-summary">
+                                        <div class="cart-content">
+                                            <h1>Cart Summary</h1>
+                                            <p>Sub Total<span><?php echo " Rs: ".$total; $_SESSION['total']=$total;?></span></p>
+                                            <p>Shipping Cost<span>Rs: 0</span></p>
+                                            <h2>Grand Total<span><?php echo "Rs: ". $total; $_SESSION['total']=$total;?></span></h2>
+                                        </div>
+                                    </div>
+                                </div>
                                         <div class="cart-btn">
-                                            <button type="submit" name="btnSave">Update Cart</button>
+                                            <button type="submit" class="" name="btnSave">Update Cart</button>
+                                            <a href="product-list.php" class="btn ">Continue Shopping</a>
                                             <a href="checkout.php" class="btn">Checkout</a>
-                <a href="product-list.php" class="btn ">Continue Shopping</a>
+                                            <a href="clear_cart.php" class="btn ">Clear Cart</a>
                                         </div>
                                     </div>
 
                                 </div>
-
-
+                               
                             </div>
                             </form>
                         </div>
