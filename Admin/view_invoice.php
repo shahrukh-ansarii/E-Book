@@ -6,7 +6,7 @@ if(!isset($_SESSION['admin']))
 }
 
 include "../connection.php";
-     $query = "select * from orders";
+     $query = "select * from invoice";
      $result = mysqli_query($conn,$query);
 
      include "includes/header.php";
@@ -18,18 +18,20 @@ include "../connection.php";
           <div class="col-12">
             <div class="card card-primary">
               <div class="card-header">
-                <h2>Order List</h2>
+                <h2>Invoice List</h2>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
               <table style="text-align:center;" class="table table-bordered table-hover">
                                  <thead>
                                     <tr>
+                                       <th>Invoice ID</th>
                                        <th>Order ID</th>
-                                       <th>Order Total Price</th>
-                                       <th>Order Date</th>
-                                       <th>Customer ID</th>
-                                       <th>Operation</th> 
+                                       <th>Book ID</th>
+                                       <th>Book Name</th>
+                                       <th>Book Price</th> 
+                                       <th>Book Quantity</th> 
+                                       <th>Operations</th> 
                                     </tr>
                                  </thead>
                                  <tbody>
@@ -38,11 +40,13 @@ include "../connection.php";
                                     {
                                     ?>
                                     <tr>
+                                        <td><?php echo $row['invoice_id'];?></td>
                                         <td><?php echo $row['o_id'];?></td>
-                                        <td><?php echo $row['o_totalPrice'];?></td>
-                                        <td><?php echo $row['o_date'];?></td>
-                                        <td><?php echo $row['cus_id'];?></td>
-                                        <td><a href="<?php echo'delete_order.php?id='.$row['cus_id']; ?>"><button class="btn btn-danger" ><i class="fas fa-trash-alt"></i></button></a></td>
+                                        <td><?php echo $row['book_id'];?></td>
+                                        <td><?php echo $row['book_name'];?></td>
+                                        <td><?php echo $row['book_price'];?></td>
+                                        <td><?php echo $row['book_quantity'];?></td>
+                                        <td><a href="<?php echo'delete_invoice.php?id='.$row['invoice_id']; ?>"><button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></a></td>
                                     </tr>
                                         <?php
                                             }

@@ -24,7 +24,7 @@ if(!isset($_SESSION['admin']))
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <table class="table table-bordered table-hover">
+              <table style="text-align:center;" class="table table-bordered table-hover">
                                  <thead>
                                     <tr>
                                        <th>Category ID</th>
@@ -44,9 +44,9 @@ if(!isset($_SESSION['admin']))
                                         <td><?php echo $row['cat_name'];?></td>
                                         <td><?php echo $row['cat_description'];?></td>
                                         <td><img src="<?php echo "images/".$row['cat_image']; ?>" width="120px" height="150px"/></td>
-                                        <td><a href="<?php echo'edit_cat.php?id='.$row['cat_id']; ?>"><button >
-                                        <i class="fas fa-pen"></i></button></a>
-                                        <a href="<?php echo'delete_cat.php?id='.$row['cat_id']; ?>"><button ><i class="fas fa-trash-alt"></i></button></a></td>
+                                        <td><a href="<?php echo'edit_cat.php?id='.$row['cat_id']; ?>"><button class="btn btn-warning" >
+                                        <i class="fas fa-pen"></i></button></a><br><br>
+                                        <a href="<?php echo'delete_cat.php?id='.$row['cat_id']; ?>"><button class="btn btn-danger" ><i class="fas fa-trash-alt"></i></button></a></td>
                                     </tr>
                                         <?php
                                             }

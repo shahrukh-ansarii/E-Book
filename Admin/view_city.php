@@ -24,7 +24,7 @@ include "../connection.php";
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <table class="table table-bordered table-hover">
+              <table style="text-align:center;" class="table table-bordered table-hover">
                                  <thead>
                                     <tr>
                                        <th>City ID</th>
@@ -41,8 +41,8 @@ include "../connection.php";
                                         <td><?php echo $row['city_id'];?></td>
                                         <td><?php echo $row['city_name'];?></td>
                                         <td>
-                                            <a href="<?php echo'edit_city.php?id='.$row['city_id']; ?>"><button  ><i class="fas fa-pen"></i></button>
-                                            <a href="<?php echo'delete_city.php?id='.$row['city_id']; ?>"><button ><i class="fas fa-trash-alt"></i></button>
+                                            <a href="<?php echo'edit_city.php?id='.$row['city_id']; ?>"><button class="btn btn-warning" ><i class="fas fa-pen"></i></button>
+                                            <a href="<?php echo'delete_city.php?id='.$row['city_id']; ?>"><button class="btn btn-danger" ><i class="fas fa-trash-alt"></i></button>
                                             </td>
                                     </tr>
                                         <?php

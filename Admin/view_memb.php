@@ -25,7 +25,7 @@ include "../connection.php";
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <table class="table ">
+              <table style="text-align:center;" class="table table-bordered table-hover">
                      <thead>
                         <tr>
                            <th>Member Id</th>
@@ -43,9 +43,8 @@ include "../connection.php";
                               <td><?php echo $row['memb_id'];?></td>
                               <td><?php echo $row['memb_name'];?></td>
                               <td><?php echo $row['memb_discount'];?></td>
-                              <td><a href="<?php echo'edit_memb.php?id='.$row['memb_id']; ?>"><button >
-                              <i class="fas fa-pen"></i></button>
-                              <a href="<?php echo'delete_memb.php?id='.$row['memb_id']; ?>"><button  ><i class="fas fa-trash-alt"></i></button></td>
+                              <td><a href="<?php echo'edit_memb.php?id='.$row['memb_id']; ?>"><button class="btn btn-warning" > <i class="fas fa-pen"></i></button>
+                              <a href="<?php echo'delete_memb.php?id='.$row['memb_id']; ?>"><button class="btn btn-danger" ><i class="fas fa-trash-alt"></i></button></td>
                         </tr>
                               <?php
                                  }

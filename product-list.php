@@ -32,7 +32,7 @@
                             <div class="col-md-3">
                                     <div class="product-item">
                                         <div class="product-title">
-                                            <a href="#"><?php echo $row['book_name'] ?></a>
+                                             <a href="#">Book: <?php echo $row['book_name'] ?></a>
                                         </div>
                                         <div class="product-image">
                                             <a href="product-detail.html">
@@ -40,11 +40,11 @@
                                             </a>
                                             <div class="product-action">
                                                 <a href="#"><i class="fa fa-cart-plus"></i></a>
-                                                <a href="#"><i class="fa fa-search"></i></a>
+                                                <a href="<?php echo'product-detail.php?id='.$row['book_id']; ?>"><i class="fas fa-info-circle"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-price">
-                                            <h3><span>Rs.</span><?php echo $row['book_price'] ?></h3>
+                                            <h3>Rs.<?php echo $row['book_price'] ?></h3>
                                             <a class="btn" href="<?php echo 'addToCart.php?id='.$row['book_id']?>"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                     </div>

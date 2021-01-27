@@ -25,7 +25,7 @@ include "../connection.php";
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <table class="table table-bordered table-hover">
+              <table style="text-align:center;" class="table table-bordered table-hover">
                                  <thead>
                                     <tr>
                                        <th>Competition ID</th>
@@ -51,9 +51,9 @@ include "../connection.php";
                                         <td><?php echo $row['comp_endDate'];?></td>
                                         <td><?php echo $row['comp_duration'];?></td>
                                         <td><?php echo $row['comp_prize'];?></td>
-                                        <td><a href="<?php echo'edit_comp.php?id='.$row['comp_id']; ?>"><button >
-                                        <i class="fas fa-pen"></i></button></a>
-                                        <a href="<?php echo'delete_comp.php?id='.$row['comp_id']; ?>"><button ><i class="fas fa-trash-alt"></i></button></a></td>
+                                        <td><a href="<?php echo'edit_comp.php?id='.$row['comp_id']; ?>"><button class="btn btn-warning" >
+                                        <i class="fas fa-pen"></i></button></a><br><br>
+                                        <a href="<?php echo'delete_comp.php?id='.$row['comp_id']; ?>"><button class="btn btn-danger" ><i class="fas fa-trash-alt"></i></button></a></td>
                                     </tr>
                                         <?php
                                             }

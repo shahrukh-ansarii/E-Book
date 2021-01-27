@@ -22,7 +22,7 @@ include "../connection.php";
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <table class="table table-bordered table-hover">
+              <table style="text-align:center;" class="table table-bordered table-hover">
                                  <thead>
                                     <tr>
                                        <th>Customer ID</th>
@@ -48,9 +48,9 @@ include "../connection.php";
                                         <td><?php echo $row['city_name'];?></td>
                                         <td><?php echo $row['cus_address'];?></td>
                                         <td><?php echo $row['cus_contact'];?></td>
-                                        <td><a href="<?php echo'edit_cus.php?id='.$row['cus_id']; ?>"><button >
-                                        <i class="fas fa-pen"></i></button></a>
-                                        <a href="<?php echo'delete_cus.php?id='.$row['cus_id']; ?>"><button ><i class="fas fa-trash-alt"></i></button></a></td>
+                                        <td><a href="<?php echo'edit_cus.php?id='.$row['cus_id']; ?>"><button class="btn btn-warning" >
+                                        <i class="fas fa-pen"></i></button></a><br><br>
+                                        <a href="<?php echo'delete_cus.php?id='.$row['cus_id']; ?>"><button class="btn btn-danger" ><i class="fas fa-trash-alt"></i></button></a></td>
                                     </tr>
                                         <?php
                                             }

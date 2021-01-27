@@ -3,13 +3,16 @@
 include "../connection.php";
 
 $id = $_GET['id'];
-if (isset($_GET['id'])) {
-    $query = "select * from city2 where city_id = '$id'";
-    $result = mysqli_query($conn, $query);
-    $row = mysqli_fetch_array($result); //mysqli_fetch_row()
-} else {
-    header('location:view_city.php');
-}
+if (isset($_GET['id'])) 
+    {
+        $query = "select * from city2 where city_id = '$id'";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_array($result); //mysqli_fetch_row()
+    } 
+else 
+    {
+        header('location:view_city.php');
+    }
 
 if (isset($_POST['cityUpdate'])) {
     $name = $_POST['catName'];

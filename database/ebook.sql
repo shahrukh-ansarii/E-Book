@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2021 at 12:57 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Generation Time: Jan 22, 2021 at 08:14 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -65,8 +64,33 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`book_id`, `book_name`, `book_title`, `cat_id`, `book_image`, `book_author`, `book_price`, `book_edition`, `book_pdf`) VALUES
-(3, 'Abc', 'unknown', 14, 'banner4.jpg', 'John', 2500, 'First', 0x526576696577446f63756d656e74202831292e646f6378),
-(9, 'You see', 'Let us D', 10, '12.jpg', 'Larkin', 3500, '3rd', 0x50726f66696c6520416c706861203035204d617920323031362e706466);
+(10, 'Divergent', 'divergent', 15, 'divergent.jpg', 'Veronica Roth', 4999, 'first', 0x446976657267656e742e706466),
+(11, 'The Bourne Identity', 'the bourne identity', 15, 'the bourne identity.jpg', 'Robert Ludlum', 6999, 'second', 0x54686520426f75726e65204964656e746974795f2041204e6f76656c202820504446447269766520292e706466),
+(12, 'The Princess Bride', 'the princess bride', 15, 'the princess bride.jpg', 'William Goldman', 4999, 'first', 0x5468655f5072696e636573735f42726964652e706466),
+(13, 'Mockingjay', 'mockingjay', 15, 'Mockingjay.jpg', 'Suzanne Collins', 7999, 'fourth', 0x6d6f636b696e675f6a61792e706466),
+(14, 'Ready Player One', 'ready player one', 15, 'ready player one.jpg', 'Ernest Cline', 4999, 'fifth', 0x72656164795f706c617965725f6f6e652e706466),
+(15, 'American Gods', 'american gods', 16, 'American_gods.jpg', 'Bryan Fuller & Michael Green', 1999, 'first', 0x416d65726963616e20476f64732e706466),
+(16, 'Bring Up the Bodies', 'Bring Up the Bodies', 17, 'bring up the bodies.jpg', 'Hilary Mantel', 3999, 'third', 0x4272696e672055702074686520426f646965732e706466),
+(17, 'Dracula', 'dracula', 18, 'dracula.jpg', 'Bram Stoker', 5999, 'fourth', 0x64726163756c612e706466),
+(18, 'Bloodline', 'bloodline', 19, 'Bloodline.jpg', 'Todd Kessler & Glenn Kessler', 4999, 'first', 0x426c6f6f646c696e652e706466),
+(19, 'Gone-girl', 'gone-girl', 19, 'gone-girl..jpg', 'Gillian Flynn', 4999, 'first', 0x676f6e652d6769726c2e2e6a7067),
+(20, 'In The Woods', 'In_the_woods', 19, 'In_the_woods.jpg', 'Rob Marshall', 5999, 'second', 0x496e5f7468655f776f6f64732e706466),
+(21, 'The Silent Patient', 'The silent patient', 19, 'The silent patient.jpg', 'Alex Michaelides', 4999, 'third', 0x5468652073696c656e742070617469656e742e706466),
+(22, 'The Big Sleep', 'the_big_sleep', 19, 'the_big_sleep.jpg', 'Howard Hawks', 4999, 'first', 0x7468655f6269675f736c6565702e706466),
+(23, 'The Hobbit', 'the hobbit', 16, 'The Hobbit.jpg', 'Peter Jackson', 4999, 'second', 0x54686520486f626269742e706466),
+(24, 'The Way of Kings', 'The Way of Kings', 16, 'The Way of Kings.jpg', 'Brandon Sanderson', 4999, 'first', 0x54686520576179206f66204b696e67732e706466),
+(25, 'Game Of Thrones', 'game of thrones', 16, 'game of thrones.jpg', 'David Benioff', 9999, 'sixth', 0x67616d65206f66207468726f6e65732e706466),
+(26, 'The Lord of the Rings', 'The Lord of the Rings', 16, 'lord of the rings.jpg', 'Peter Jackson', 8999, 'fifth', 0x546865204c6f7264206f66207468652052696e67732e706466),
+(27, 'The Red Tent', 'The_red_tent', 17, 'The_red_tent.jpg', 'Roger Young', 6999, 'second', 0x5468655f7265645f74656e742e747874),
+(28, 'War And Peace', 'War_and_Peace', 17, 'War_and_Peace.jpg', 'Leo Tolstoy', 7999, 'first', 0x5761725f616e645f50656163652e706466),
+(29, 'Frankenstein', 'frankenstein', 18, 'frankenstein.jpg', 'Mary Shelley', 5999, 'first', 0x6672616e6b656e737465696e2e706466),
+(30, 'Pet Sematary', 'Pet Sematary', 18, 'Pet Sematary.jpg', 'Stephen King', 4999, 'second', 0x5065742d53656d61746172792e706466),
+(31, 'The Shining', 'The-shining', 18, 'The Shining.jpg', 'Stephen King', 4999, 'second', 0x5468652d5368696e696e672e706466),
+(32, 'Bird Box', 'Bird Box', 18, 'Bird Box.jpg', 'singer Josh Malerman', 4999, 'first', 0x4269726420426f782e706466),
+(33, 'Karacahi Lingo', 'karachi Lingo', 17, 'fiction.jpg', 'Война и мир  (Voyna i mir)', 4999, 'first', 0x5761725f616e645f50656163652e706466),
+(34, 'Wolf Hall', 'Wolf Hall', 17, 'Wolf Hall.jpg', 'Hilary Mantel', 9999, 'eight', 0x576f6c662048616c6c2e706466),
+(35, 'A Tale of Two Cities', 'A Tale of Two Cities', 17, 'A Tale of Two Cities.jpg', 'Talha Anjum & Talhah Yunus', 24999, 'first', 0x412054616c65206f662054776f204369746965732e706466),
+(36, 'Karachi Mera ', 'karachi mera', 15, 'karachi mera.jpg', 'Talha Anjum aka  (King of Melody)', 84999, 'second', 0x6b6172616368692d6d6572612e706466);
 
 -- --------------------------------------------------------
 
@@ -98,9 +122,11 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`cat_id`, `cat_name`, `cat_description`, `cat_image`) VALUES
-(10, 'Historical Fiction', 'abc d', 'banner3.jpg'),
-(13, 'History', 'lorum ipsem', 'download (1).jfif'),
-(14, 'Horror', 'abcd', 'download (2).jfif');
+(15, 'Action ', 'Action fiction is a form of genre fiction whose subject matter is characterized by emphasis on exciting action sequences. ... It includes martial arts action, extreme sports action, car chases and vehicles, suspense action, and action comedy, with each focusing in more detail on its own type and flavor of action.', 'action.jpg'),
+(16, 'Fantasy', 'Another description of a Fantasy Novel is any book that contains unrealistic settings, or magic, often set in a medieval universe, or possibly involving mythical beings or supernatural forms as a primary element of the plot, theme, or setting. ... Fantasy usually describes those stories that could not happen in real life.', 'fantasy.jpg'),
+(17, 'Historical Fiction', 'Historical fiction is a literary genre that reconstructs past events in fictional stories. Common characteristics of this writing genre are the inclusion of historical events or historical people, invented scenes and dialogue,', 'fiction.jpg'),
+(18, 'Horror', 'Horror story, a story in which the focus is on creating a feeling of fear. Such tales are of ancient origin and form a substantial part of the body of folk literature. They can feature supernatural elements such as ghosts, witches, or vampires, or they can address more realistic psychological fears.', 'horror.jpg'),
+(19, 'Mystery', 'Mystery fiction is a genre of fiction that usually involves a mysterious death or a crime to be solved. ... \"Mystery fiction\" can be detective stories in which the emphasis is on the puzzle or suspense element and its logical solution such as a whodunit.', 'mystery.jpg');
 
 -- --------------------------------------------------------
 
@@ -143,7 +169,7 @@ CREATE TABLE `competition` (
 
 INSERT INTO `competition` (`comp_id`, `comp_title`, `comp_description`, `comp_startDate`, `comp_endDate`, `comp_duration`, `comp_prize`) VALUES
 (1, 'Essay', 'abcd', '2021-01-16', '2021-01-27', '3 hours', '20000'),
-(2, 'Story writting', 'demo', '2021-01-18', '2021-01-26', '3 hours', '20000');
+(2, 'Story writting', 'demo', '2021-01-18', '2021-01-26', '3 hours', '25000');
 
 -- --------------------------------------------------------
 
@@ -167,13 +193,9 @@ CREATE TABLE `customer2` (
 
 INSERT INTO `customer2` (`cus_id`, `cus_name`, `cus_email`, `cus_password`, `cus_address`, `city_id`, `cus_contact`) VALUES
 (1, 'ali', 'ali@gmail.com', '98878', 'NJKHUKH                       \r\n                        ', 1, 2147483647),
-(2, 'Aisar', 'AISAR@GMAIL.COM', '987878', 'jkhujhuh                       \r\n                        ', 1, 2147483647),
-(3, 'Hassan Kamal', 'hassan@gmail.com', '98988787', 'nkjhjh                       \r\n                        ', 1, 2147483647),
+(3, 'Hassan ', 'hassan@gmail.com', '98988787', 'nkjhjh                                               ', 1, 2147483647),
 (4, 'shahrukh', 'ahmed@gmil.com', 'mkjiu897', 'nbjhgjhyg                       \r\n                        ', 2, 2147483647),
-(5, 'Shumail', 'shumail@gmail.com', 'shuamii123', 'House #401 Sec. 7/F Al-Muslimabad', 2, 2147483647),
-(6, 'Shumail', 'shumail@gmail.com', 'shuamii123', 'House #401 Sec. 7/F Al-Muslimabad', 2, 2147483647),
-(7, 'Shumail', 'shumail@gmail.com', 'shuamii123', 'House #401 Sec. 7/F Al-Muslimabad', 2, 2147483647),
-(8, 'Asher', 'asher@gmail.com', 'asher123', '     house 123                  \r\n                        ', 2, 2147483647);
+(5, 'Shumail', 'shumail@gmail.com', 'shuamii123', 'House #405', 2, 2147483647);
 
 -- --------------------------------------------------------
 
@@ -206,10 +228,20 @@ CREATE TABLE `invoice` (
 --
 
 INSERT INTO `invoice` (`invoice_id`, `o_id`, `book_id`, `book_name`, `book_price`, `book_quantity`) VALUES
-(1, 1, 3, 'Abc', 2500, 3),
-(2, 1, 9, 'You see', 3500, 4),
-(3, 7, 3, 'Abc', 2500, 3),
-(4, 7, 9, 'You see', 3500, 4);
+(5, 8, 11, 'The Bourne Identity', 6999, 2),
+(6, 8, 12, 'The Princess Bride', 4999, 1),
+(7, 8, 15, 'American Gods', 1999, 0),
+(8, 9, 11, 'The Bourne Identity', 6999, 1),
+(9, 10, 11, 'The Bourne Identity', 6999, 1),
+(10, 10, 13, 'Mockingjay', 7999, 0),
+(11, 13, 11, 'The Bourne Identity', 6999, 1),
+(12, 14, 11, 'The Bourne Identity', 6999, 1),
+(13, 15, 15, 'American Gods', 1999, 1),
+(14, 16, 11, 'The Bourne Identity', 6999, 1),
+(15, 18, 12, 'The Princess Bride', 4999, 1),
+(16, 19, 12, 'The Princess Bride', 4999, 1),
+(17, 21, 12, 'The Princess Bride', 4999, 1),
+(18, 22, 11, 'The Bourne Identity', 6999, 1);
 
 -- --------------------------------------------------------
 
@@ -251,7 +283,22 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`o_id`, `o_totalPrice`, `o_date`, `cus_id`) VALUES
 (1, 0, '2021-01-21', 1),
-(7, 21500, '2021-01-21', 1);
+(7, 21500, '2021-01-21', 1),
+(8, 18997, '2021-01-21', 1),
+(9, 6999, '2021-01-22', 1),
+(10, 6999, '2021-01-22', 1),
+(11, 0, '2021-01-22', 1),
+(12, 0, '2021-01-22', 1),
+(13, 6999, '2021-01-22', 1),
+(14, 6999, '2021-01-22', 1),
+(15, 1999, '2021-01-22', 1),
+(16, 6999, '2021-01-22', 1),
+(17, 0, '2021-01-22', 1),
+(18, 4999, '2021-01-22', 1),
+(19, 4999, '2021-01-22', 1),
+(20, 0, '2021-01-22', 1),
+(21, 4999, '2021-01-22', 1),
+(22, 6999, '2021-01-22', 1);
 
 -- --------------------------------------------------------
 
@@ -385,7 +432,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `books_on_membership`
@@ -397,7 +444,7 @@ ALTER TABLE `books_on_membership`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `city2`
@@ -427,7 +474,7 @@ ALTER TABLE `dealer`
 -- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
-  MODIFY `invoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `invoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `membership`
@@ -439,7 +486,7 @@ ALTER TABLE `membership`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `o_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `o_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `participants`

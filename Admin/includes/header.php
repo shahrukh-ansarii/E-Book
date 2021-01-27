@@ -119,6 +119,15 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="view_invoice.php" class="nav-link">
+            <i class="nav-icon fas fa-file-invoice"></i>
+              <p>
+                Invoice
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
           
           <li class="nav-item">
             <a href="#" class="nav-link">

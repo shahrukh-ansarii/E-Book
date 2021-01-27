@@ -231,7 +231,7 @@
                                 </a>
                                 <div class="product-action">
                                     <a href="product-list.php"><i class="fa fa-cart-plus"></i></a>
-                                    <a href="#"><i class="fa fa-search"></i></a>
+                                    <a href="<?php echo'product-detail.php?id='.$row['book_id']; ?>"><i class="fas fa-info-circle"></i></a>
                                 </div>
                             </div>
                             <div class="product-price">
@@ -289,7 +289,7 @@
                                 </a>
                                 <div class="product-action">
                                     <a href="product-list.php"><i class="fa fa-cart-plus"></i></a>
-                                    <a href="#"><i class="fa fa-search"></i></a>
+                                    <a href="<?php echo'product-detail.php?id='.$row['book_id']; ?>"><i class="fas fa-info-circle"></i></a>
                                 </div>
                             </div>
                             <div class="product-price">
@@ -308,8 +308,13 @@
         <!-- Featured Product End -->
         
         <!-- Review Start -->
-        <div class="review">
+        <div class="review reecent-product product">
             <div class="container-fluid">
+            <br>
+                <div class="section-header">
+                    <h1>Categories</h1>
+                </div>
+                <br>
                 <div class="row align-items-center review-slider normal-slider">
                 <?php
                     while ($row2 = mysqli_fetch_assoc($result2)) 
@@ -317,8 +322,8 @@
                 ?>
                     <div class="col-md-6">
                         <div class="review-slider-item">
-                            <div class="review-img">
-                            <img src="<?php echo "admin/images/".$row2['cat_image']; ?>" width="200px" height="290px" alt="Category Image">
+                            <div >
+                            <img src="<?php echo "admin/images/".$row2['cat_image']; ?>" width="130px" height="190px" >
                             </div>
                             <div class="review-text">
                                 <h2><?php echo $row2['cat_name'] ?></h2>
